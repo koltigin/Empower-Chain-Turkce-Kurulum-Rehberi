@@ -254,7 +254,7 @@ sudo journalctl -u empowerd -f --no-hostname -o cat
 ```shell 
 empowerd tx staking create-validator \
 --amount=9900000umpwr \
---pubkey=$(strided tendermint show-validator) \
+--pubkey=$(empowerd tendermint show-validator) \
 --moniker=$EMPOW_NODENAME \
 --chain-id=$EMPOW_CHAIN_ID \
 --commission-rate="0.10" \
