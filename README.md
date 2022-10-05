@@ -158,7 +158,7 @@ Bir önceki komutu girdikten sonra bir gentx dosyası oluşacak. Bu dosya `/.emp
  - 🟡 Açılan ekranda da aşağıdaki resimdeki gibi `Create pull request` butonuna basıyoruz ve işlemi tamamlıyoruz.
  ![Ekran Alıntısı-7](https://user-images.githubusercontent.com/102043225/194042453-4ae3b033-033a-401d-87cf-eb451830f183.jpg)
 
-🟡 **config** dosyası içerisinde ki **priv_validator_key.json** dosyasını yedek almayı unutmayınız!
+🟡 `config` dosyası içerisinde ki `priv_validator_key.json` dosyasını yedek almayı unutmayınız!
 
 ## altruistic-1 Genesis Dosyasını İndirme
 ```bash
@@ -217,7 +217,7 @@ sudo journalctl -u empowerd -f -o cat
 Genesis time is in the future. Sleeping until then... genTime=...
 ```
 
-## Bağlanmada Sorun Yaşarsanız Snap Kurulumu
+## Bağlanmada Sorun Yaşarsanız ya da Snap Kurulumu Yapmak İsterseniz
 
 ```bash
 sudo apt update
