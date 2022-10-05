@@ -252,7 +252,7 @@ sudo journalctl -u empowerd -f --no-hostname -o cat
    - `website`  `https://anatolianteam.com` yazan yere varsa bir siteniz ya da twitter vb. adresinizi yazabilirsiniz.
    - `security-contact`  E-posta adresiniz.
 ```shell 
-strided tx staking create-validator \
+empowerd tx staking create-validator \
 --amount=9900000umpwr \
 --pubkey=$(strided tendermint show-validator) \
 --moniker=$EMPOW_NODENAME \
