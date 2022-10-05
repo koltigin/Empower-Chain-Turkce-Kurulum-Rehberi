@@ -175,8 +175,9 @@ empowerd tendermint unsafe-reset-all --home $HOME/.empowerchain
 ```bash
 sha256sum $HOME/.empowerchain/config/genesis.json
 ```
-Çıktı şu şekilde olmalıdır
-  `Result: fcae4a283488be14181fdc55f46705d9e11a32f8e3e8e25da5374914915d5ca8`
+Çıktı aşağıdaki gibi olmalıdır
+  `fcae4a283488be14181fdc55f46705d9e11a32f8e3e8e25da5374914915d5ca8`
+![Ekran Alıntısı-8](https://user-images.githubusercontent.com/102043225/194043211-3834b614-0757-4d72-bf68-9a578291dda5.jpg)
 
 ## Servis Dosyası Oluşturma
 ```bash
@@ -245,19 +246,3 @@ strided tx staking create-validator \
 --identity="XXXX1111XXXX1111" \
 -y
  ```  
-
-
-# EmpowerChain
-
-This is where the code for anything related to EmpowerChain is located. Documentation is being built right now.
-
-In the meantime, take a look at our [whitepaper](https://github.com/empowerchain/empowerchain/blob/main/Whitepaper.pdf), [website](https://empowerchain.io) and [@empowerchain_io on twitter](https://twitter.com/empowerchain_io).
-
-# ./chain
-
-In the chain folder is where the actual blockchain-code is located.
-
-# ./docs
-
-In the docs folder you will find the documentation and doc site for https://docs.empowerchain.io
-
