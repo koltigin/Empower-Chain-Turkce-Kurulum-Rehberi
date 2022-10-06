@@ -124,7 +124,7 @@ empowerd add-genesis-account $EMPOW_WALLET 1000000umpwr
 ```bash
 empowerd gentx $EMPOW_WALLET 1000000umpwr \
 --chain-id=$EMPOW_CHAIN_ID \
---moniker="$EMPOW_NODENAME" \
+--moniker=$EMPOW_NODENAME \
 --commission-max-change-rate 0.1 \
 --commission-max-rate 0.2 \
 --commission-rate 0.05 \
