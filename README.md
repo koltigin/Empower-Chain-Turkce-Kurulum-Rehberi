@@ -191,7 +191,9 @@ sudo journalctl -u empowerd -f --no-hostname -o cat
 
 **Kaynak: [NodeJumper](https://nodejumper.io/empower-testnet/sync)**
 
-
+## Faucet
+Discord [#faucet](https://discord.gg/BUwMw5JUqS) kanalından `$request CUZDAN-ADRESINIZ altruistic-1
+` şeklinde mesaj atarak token isteyebilirsiniz. 24 saatte bir token isteme hakkınız bulunuyor.
 🔴 **Faucet açıldıktan sonra validator oluşturacağız.**
 
 
@@ -220,6 +222,10 @@ empowerd tx staking create-validator \
 --identity="XXXX1111XXXX1111" \
 -y
  ```  
+ 
+ ## Explorer
+ [Zendesk](https://testnet-empower.zenscan.io/validators.php)
+ [Nodes Guru](https://empower.explorers.guru)
 
 🟡 `config` dosyası içerisinde ki `priv_validator_key.json` dosyasını yedek almayı unutmayınız!
 
