@@ -1,3 +1,8 @@
+## Genesis Hesabı Ekleme 
+```bash
+empowerd add-genesis-account $EMPOW_WALLET 1000000umpwr
+```
+
 ## Gentx Oluşturma
  Aşağıdaki komutta aşağıda berlittiğim yerler dışında bir değişikli yapmanız gerekmez;
   - `identity`  burayda 'XXXX1111XXXX1111' yazan yere `https://keybase.io` sitesine üye olarak size verilen kimlik numaranızı yazıyorsunuz.
