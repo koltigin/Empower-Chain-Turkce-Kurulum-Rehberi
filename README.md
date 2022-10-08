@@ -162,11 +162,6 @@ sudo systemctl restart empowerd && \
 sudo journalctl -u empowerd -f -o cat
 ```
 
-**Testnet'in başında bir düğüm çalıştırırsanız ve Genesis'teyseniz, bu mesajı alırsınız**
-```bash
-Genesis time is in the future. Sleeping until then... genTime=...
-```
-
 ## Bağlanmada Sorun Yaşarsanız ya da Snap Kurulumu Yapmak İsterseniz
 
 ```bash
