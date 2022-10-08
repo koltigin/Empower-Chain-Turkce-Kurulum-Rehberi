@@ -47,3 +47,8 @@ Bir önceki komutu girdikten sonra bir gentx dosyası oluşacak. Bu dosya `/.emp
  ![Ekran Alıntısı-7](https://user-images.githubusercontent.com/102043225/194042453-4ae3b033-033a-401d-87cf-eb451830f183.jpg)
 
 🟡 `config` dosyası içerisinde ki `priv_validator_key.json` dosyasını yedek almayı unutmayınız!
+
+**Testnet'in başında bir düğüm çalıştırırsanız ve Genesis'teyseniz, bu mesajı alırsınız**
+```bash
+Genesis time is in the future. Sleeping until then... genTime=...
+```
