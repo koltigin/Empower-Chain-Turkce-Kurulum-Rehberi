@@ -308,7 +308,7 @@ empowerd tx gov vote 1 yes --from $EMPOW_WALLET --chain-id=$EMPOW_CHAIN_ID
 
 ### Validatore Stake Etme  Delegate Etme
 ```shell
-empowerd tx staking delegate $VALOPER_ADDRESS 100000000utoi --from=$EMPOW_WALLET --chain-id=$EMPOW_CHAIN_ID  --gas=auto
+empowerd tx staking delegate $VALOPER_ADDRESS 100000000umpwr --from=$EMPOW_WALLET --chain-id=$EMPOW_CHAIN_ID  --gas=auto
 ```
 
 ### Mevcut Validatorden Diğer Validatore Stake Etme  Redelegate Etme
