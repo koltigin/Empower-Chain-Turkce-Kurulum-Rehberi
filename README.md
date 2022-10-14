@@ -273,7 +273,7 @@ curl icanhazip.com
 
 ### Peer Adresinizi Öğrenme
 ```shell
-echo $(empowerd tendermint show-node-id)@$(curl ifconfig.me)18656
+echo $(empowerd tendermint show-node-id)@$(curl ifconfig.me):18656
 ```
 
 ### Cüzdanların Listesine Bakma
