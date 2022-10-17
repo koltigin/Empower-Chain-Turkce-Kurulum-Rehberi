@@ -348,8 +348,8 @@ empowerd tx slashing unjail \
 ```shell
 sudo systemctl stop empowerd
 sudo rm /etc/systemd/system/empowerdd.service -rf
-sudo rm $HOME/.empowerd/ -rf
-sudo rm $HOME/Testnet1 -rf
+sudo rm $HOME/.empowerchain/ -rf
+sudo rm $HOME/empowerchain -rf
 sudo rm /usr/local/bin/empowerd -rf
 ```
 
