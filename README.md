@@ -347,7 +347,7 @@ empowerd tx slashing unjail \
 ### Node'u Tamamen Silme 
 ```shell
 sudo systemctl stop empowerd
-sudo rm /etc/systemd/system/empowerdd.service -rf
+sudo rm /etc/systemd/system/empowerd.service -rf
 sudo rm $HOME/.empowerchain/ -rf
 sudo rm $HOME/empowerchain -rf
 sudo rm /usr/local/bin/empowerd -rf
