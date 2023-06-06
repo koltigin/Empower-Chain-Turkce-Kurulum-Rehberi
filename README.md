@@ -1,6 +1,6 @@
 # Empower Chain circulus-1 Testnet Kurulum Rehberi
 
-![empower](https://user-images.githubusercontent.com/104348282/192093493-67779857-653e-4018-8c78-49530690f7a0.png)
+![image](https://github.com/koltigin/Empower-Chain-Turkce-Kurulum-Rehberi/assets/102043225/1d57bd85-f67e-469c-867d-b3579d9fc02a)
 
 ## Sistem Gereksinimleri (Minimum)
   * 4 CPU
