@@ -236,25 +236,27 @@ empowerd status 2>&1 | jq .SyncInfo
    - `details` `Always forward with the Anatolian Team 🚀` yazan yere kendiniz hakkında bilgiler yazabilirsiniz.
    - `website`  `https://anatolianteam.com` yazan yere varsa bir siteniz ya da twitter vb. adresinizi yazabilirsiniz.
    - `security-contact`  E-posta adresiniz.
-```shell 
+
+ ```shell 
 empowerd tx staking create-validator \
 --amount=9900000umpwr \
 --pubkey=$(empowerd tendermint show-validator) \
 --moniker=$EMPOW_NODENAME \
 --chain-id=$EMPOW_CHAIN_ID \
---commission-rate="0.10" \
---commission-max-rate="0.20" \
---commission-max-change-rate="0.1" \
+--commission-rate=0.10 \
+--commission-max-rate=0.20 \
+--commission-max-change-rate=0.01 \
 --min-self-delegation="1" \
---fees=250umpwr \
---gas=200000 \
+--gas-prices=0.1unibi \
+--gas-adjustment=1.5 \
+--gas=auto \
 --from=$EMPOW_WALLET \
 --details="Always forward with the Anatolian Team 🚀" \
 --security-contact="xxxxxxx@gmail.com" \
 --website="https://anatolianteam.com" \
 --identity="XXXX1111XXXX1111" \
--y
- ```  
+--yes
+``` 
  
  ## Explorer
  [EmpowerChain](https://empowerchain.exploreme.pro/)
