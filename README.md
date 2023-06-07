@@ -17,6 +17,18 @@
 | RAM	| 8 GB | 16 GB |
 | Storage	| 250 GB SSD | 500 GB+ SSD |
 
+## Ödüller
+Tüm ödüller linear olarak 1 yıl süreyle verilecektir. 
+Ödüller ve görevler ile ilgili olarak resmi dökummana [buradan](https://docs.empowerchain.io/testnet/overview) erişebilirsiniz.
+
+## Test Aşamayaları
+
+**31 Mayıs - 6 Haziran: Ağ önyükleme aşaması:** bu yalnızca doğrulayıcılar için geçerlidir.
+**7 Haziran - 20 Haziran: Ana aşama:** bu herkes içindir (testçiler, geliştiriciler, doğrulayıcılar)
+**21 Haziran - 25 Haziran: Stres testi aşaması:** Bu aynı zamanda herkes içindir, ancak ağa spam göndermeye odaklanılacaktır.
+
+**28 Haziran:** Mainnet lansmanı için hedef tarihtir.
+
 ## Sistemi Güncelleme
 **Update packages and install required packages**
 ```bash
