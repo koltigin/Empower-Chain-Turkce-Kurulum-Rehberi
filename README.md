@@ -177,8 +177,8 @@ empowerd keys add $EMPOW_WALLET --recover
 Burada cüzdan ve valoper bilgilerimizi değişkene ekliyoruz.
 
 ```shell
-EMPOW_WALLET_ADDRESS=$(nibid keys show $EMPOW_WALLET -a)
-EMPOW_VALOPER_ADDRESS=$(nibid keys show $EMPOW_WALLET --bech val -a)
+EMPOW_WALLET_ADDRESS=$(empowerd keys show $EMPOW_WALLET -a)
+EMPOW_VALOPER_ADDRESS=$(empowerd keys show $EMPOW_WALLET --bech val -a)
 ```
 
 ```shell
