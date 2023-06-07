@@ -176,10 +176,10 @@ curl "https://snapshots2-testnet.nodejumper.io/empower-testnet/${SNAP_NAME}" | l
 
 ## Servisi Başlatma ve Logları Kontrol Etme
 ```bash
-sudo systemctl daemon-reload && \
-sudo systemctl enable empowerd && \
-sudo systemctl restart empowerd && \
-sudo journalctl -u empowerd -f -o cat
+systemctl daemon-reload && \
+systemctl enable empowerd && \
+systemctl restart empowerd && \
+journalctl -u empowerd -f -o cat
 ```
 
 ## Cüzdan Oluşturma
@@ -212,7 +212,7 @@ source $HOME/.bash_profile
 🔴 **Cüzdanınızın mnemonic kelimelerini kaydetmeyi unutmayınız!**
 
 ## Faucet
-Discord [#faucet](https://discord.gg/BUwMw5JUqS) kanalından `$request CUZDAN-ADRESINIZ altruistic-1
+Discord [#faucet](https://discord.gg/fpdHVZRqqm) kanalından `$request CUZDAN-ADRESINIZ altruistic-1
 ` şeklinde mesaj atarak token isteyebilirsiniz. 24 saatte bir token isteme hakkınız bulunuyor.
 🔴 **Faucet açıldıktan sonra validator oluşturacağız.**
 
