@@ -150,6 +150,7 @@ empowerd tendermint unsafe-reset-all --home $HOME/.empowerchain --keep-addr-book
 SNAP_NAME=$(curl -s https://snapshots2-testnet.nodejumper.io/empower-testnet/info.json | jq -r .fileName)
 curl "https://snapshots2-testnet.nodejumper.io/empower-testnet/${SNAP_NAME}" | lz4 -dc - | tar -xf - -C "$HOME/.empowerchain"
 ```
+**Kaynak: [NodeJumper](https://nodejumper.io/empower-testnet/sync)**
 
 ## Servisi Başlatma ve Logları Kontrol Etme
 ```bash
@@ -158,14 +159,6 @@ sudo systemctl enable empowerd && \
 sudo systemctl restart empowerd && \
 sudo journalctl -u empowerd -f -o cat
 ```
-
-## Bağlanmada Sorun Yaşarsanız ya da Snap Kurulumu Yapmak İsterseniz
-
-```bash
-
-```
-
-**Kaynak: [NodeJumper](https://nodejumper.io/empower-testnet/sync)**
 
 ## Cüzdan Oluşturma
 
