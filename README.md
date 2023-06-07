@@ -178,9 +178,13 @@ curl "https://snapshots2-testnet.nodejumper.io/empower-testnet/${SNAP_NAME}" | l
 ```bash
 systemctl daemon-reload && \
 systemctl enable empowerd && \
-systemctl restart empowerd && \
-journalctl -u empowerd -f -o cat
+systemctl restart empowerd
 ```
+
+## Logları Kontrol Etme
+```shell
+journalctl -u empowerd -f -o cat
+```  
 
 ## Cüzdan Oluşturma
 
@@ -216,6 +220,15 @@ Discord [#faucet](https://discord.gg/fpdHVZRqqm) kanalından `$request CUZDAN-AD
 ` şeklinde mesaj atarak token isteyebilirsiniz. 24 saatte bir token isteme hakkınız bulunuyor.
 🔴 **Faucet açıldıktan sonra validator oluşturacağız.**
 
+🔴 **BU AŞAMADAN SONRA NODE'UMUZUN EŞLEŞMESİNİ BEKLİYORUZ.**
+
+## Senkronizasyonu Kontrol Etme
+`false` çıktısı almadıkça bir sonraki yani validator oluşturma adımına geçmiyoruz.
+```shell
+empowerd status 2>&1 | jq .SyncInfo
+```
+
+🔴 **Eşleşme tamamlandıysa aşağıdaki adıma geçiyoruz.**
 
 ## Validator Oluşturma
  Aşağıdaki komutta aşağıda berlittiğim yerler dışında bir değişikli yapmanız gerekmez;
@@ -244,7 +257,7 @@ empowerd tx staking create-validator \
  ```  
  
  ## Explorer
- [Zendesk](https://testnet-empower.zenscan.io/validators.php)
+ [EmpowerChain](https://empowerchain.exploreme.pro/)
  [Nodes Guru](https://empower.explorers.guru)
 
 🟡 `config` dosyası içerisinde ki `priv_validator_key.json` dosyasını yedek almayı unutmayınız!
