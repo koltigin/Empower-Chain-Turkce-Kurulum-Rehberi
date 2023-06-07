@@ -328,17 +328,17 @@ empowerd keys add $EMPOW_WALLET --recover
 
 ### Cüzdanı Silme
 ```shell
-empowerd keys delete CUZDAN_ADI
+empowerd keys delete $EMPOW_WALLET
 ```
 
 ### Cüzdan Bakiyesine Bakma
 ```shell
-empowerd query bank balances CUZDAN_ADRESI
+empowerd query bank balances $EMPOW_WALLET_ADDRESS
 ```
 
 ### Bir Cüzdandan Diğer Bir Cüzdana Transfer Yapma
 ```shell
-empowerd tx bank send CUZDAN_ADRESI GONDERILECEK_CUZDAN_ADRESI 100000000ubpf
+empowerd tx bank send $EMPOW_WALLET_ADDRESS GONDERILECEK_CUZDAN_ADRESI 100000000ubpf
 ```
 
 ### Proposal Oylamasına Katılma
@@ -361,9 +361,8 @@ empowerd tx staking redelegate MevcutValidatorAdresi StakeEdilecekYeniValidatorA
 empowerd tx distribution withdraw-all-rewards --from=$EMPOW_WALLET --chain-id=$EMPOW_CHAIN_ID --gas=auto
 ```
 
-### Komisyon Ödüllerini Çekme
 ```shell
-empowerd tx distribution withdraw-rewards VALIDATOR_ADRESI --from=$EMPOW_WALLET --commission --chain-id=$EMPOW_CHAIN_ID 
+empowerd tx distribution withdraw-rewards $EMPOW_VALOPER_ADDRESS --from=$EMPOW_WALLET --commission --chain-id=$EMPOW_CHAIN_ID 
 ```
 
 ### Validator İsmini Değiştirme
