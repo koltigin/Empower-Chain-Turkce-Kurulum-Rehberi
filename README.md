@@ -346,19 +346,19 @@ empowerd tx bank send $EMPOW_WALLET_ADDRESS GONDERILECEK_CUZDAN_ADRESI 100000000
 empowerd tx gov vote 1 yes --from $EMPOW_WALLET --chain-id=$EMPOW_CHAIN_ID 
 ```
 
-### Validatore Stake Etme  Delegate Etme
+### Validatore Stake Etme / Delegate Etme
 ```shell
-empowerd tx staking delegate $VALOPER_ADDRESS 100000000umpwr --from=$EMPOW_WALLET --chain-id=$EMPOW_CHAIN_ID  --gas=auto
+empowerd tx staking delegate $VALOPER_ADDRESS 100000000umpwr --from=$EMPOW_WALLET --chain-id=$EMPOW_CHAIN_ID  --gas-prices=0.1unibi --gas-adjustment=1.5 --gas=auto
 ```
 
 ### Mevcut Validatorden Diğer Validatore Stake Etme  Redelegate Etme
 ```shell
-empowerd tx staking redelegate MevcutValidatorAdresi StakeEdilecekYeniValidatorAdresi 100000000ubpf --from=$EMPOW_WALLET --chain-id=$EMPOW_CHAIN_ID --gas=auto
+empowerd tx staking redelegate MevcutValidatorAdresi StakeEdilecekYeniValidatorAdresi 100000000ubpf --from=$EMPOW_WALLET --chain-id=$EMPOW_CHAIN_ID --gas-prices=0.1unibi --gas-adjustment=1.5 --gas=auto
 ```
 
 ### Ödülleri Çekme
 ```shell
-empowerd tx distribution withdraw-all-rewards --from=$EMPOW_WALLET --chain-id=$EMPOW_CHAIN_ID --gas=auto
+empowerd tx distribution withdraw-all-rewards --from=$EMPOW_WALLET --chain-id=$EMPOW_CHAIN_ID --gas-prices=0.1unibi --gas-adjustment=1.5 --gas=auto
 ```
 
 ```shell
