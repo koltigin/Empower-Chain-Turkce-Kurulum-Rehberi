@@ -2,10 +2,20 @@
 
 ![Empow-GitHub](https://github.com/koltigin/Empower-Chain-Turkce-Kurulum-Rehberi/assets/102043225/59feaac2-92ea-4fac-a313-928552756b6f)
 
-## Sistem Gereksinimleri (Minimum)
-  * 4 CPU
-  * 8GB RAM
-  * 200 GB SSD
+## Bağlantılar
+ ✔️ [Empower Website](https://empower.eco)<br>
+ ✔️ [EmpowerChain Website](https://empowerchain.io)<br>
+ ✔️ [Blockchain Explorer](https://empower.explorers.guru/)<br>
+ ✔️ [Doküman](https://docs.empowerchain.io)<br>
+ ✔️ [Discord](https://discord.gg/fpdHVZRqqm)<br> 
+ ✔️ [Görevler ve Ödüller](https://docs.empowerchain.io/testnet/tasks-and-rewards)
+
+## Gereksinimler 
+| Bileşenler | Minimum Gereksinimler | **Tavsiye Edilen Gereksinimler** | 
+| ------------ | ------------ | ------------ |
+| CPU |	4 | 4 |
+| RAM	| 8 GB | 16 GB |
+| Storage	| 250 GB SSD | 500 GB+ SSD |
 
 ## Sistemi Güncelleme
 **Update packages and install required packages**
