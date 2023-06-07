@@ -247,7 +247,7 @@ empowerd tx staking create-validator \
 --commission-max-rate=0.20 \
 --commission-max-change-rate=0.01 \
 --min-self-delegation="1" \
---gas-prices=0.1unibi \
+--gas-prices=0.1umpwr \
 --gas-adjustment=1.5 \
 --gas=auto \
 --from=$EMPOW_WALLET \
