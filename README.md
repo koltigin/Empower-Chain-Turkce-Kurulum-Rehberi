@@ -119,13 +119,11 @@ sed -i.bak -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:${E
 sed -i.bak -e "s%^node = \"tcp://localhost:26657\"%node = \"tcp://localhost:${EMPOW_PORT}657\"%" $HOME/.empowerchain/config/client.toml
 ```
 
-## Cüzdan Oluşturma
-
-`$EMPOW_WALLET` bölümünü değiştirmiyoruz kurulumun başında cüzdanımıza değişkenler ile isim belirledik.
+## Min. GAS Ayarlama
 ```bash
-empowerd keys add $EMPOW_WALLET
+sed -i 's|^minimum-gas-prices *=.*|minimum-gas-prices = "0.001umpwr"|g' $HOME/.empowerchain/config/app.toml
+sed -i 's|^prometheus *=.*|prometheus = true|' $HOME/.empowerchain/config/config.toml
 ```
-🔴 **Cüzdanınızın mnemonic kelimelerini kaydetmeyi unutmayınız!**
 
 ## Servis Dosyası Oluşturma
 ```bash
@@ -164,26 +162,39 @@ sudo journalctl -u empowerd -f -o cat
 ## Bağlanmada Sorun Yaşarsanız ya da Snap Kurulumu Yapmak İsterseniz
 
 ```bash
-sudo apt update
-sudo apt install lz4 -y
 
-sudo systemctl stop empowerd
-
-cp $HOME/.empowerchain/data/priv_validator_state.json $HOME/.empowerchain/priv_validator_state.json.backup
-empowerd tendermint unsafe-reset-all --home $HOME/.empowerchain --keep-addr-book
-
-rm -rf $HOME/.empowerchain/data 
-
-SNAP_NAME=$(curl -s https://snapshots2-testnet.nodejumper.io/empower-testnet/ | egrep -o ">altruistic-1.*\.tar.lz4" | tr -d ">")
-curl https://snapshots2-testnet.nodejumper.io/empower-testnet/${SNAP_NAME} | lz4 -dc - | tar -xf - -C $HOME/.empowerchain
-
-mv $HOME/.empowerchain/priv_validator_state.json.backup $HOME/.empowerchain/data/priv_validator_state.json
-
-sudo systemctl restart empowerd
-sudo journalctl -u empowerd -f --no-hostname -o cat
 ```
 
 **Kaynak: [NodeJumper](https://nodejumper.io/empower-testnet/sync)**
+
+## Cüzdan Oluşturma
+
+### Yeni Cüzdan Oluşturma
+`$EMPOW_WALLET` bölümünü değiştirmiyoruz kurulumun başında cüzdanımıza değişkenler ile isim belirledik.
+```bash
+empowerd keys add $EMPOW_WALLET
+```
+
+### Var Olan Cüzdanı İçeri Aktarma
+```shell
+empowerd keys add $EMPOW_WALLET --recover
+```
+
+## Cüzdan ve Valoper Bilgileri
+Burada cüzdan ve valoper bilgilerimizi değişkene ekliyoruz.
+
+```shell
+EMPOW_WALLET_ADDRESS=$(nibid keys show $EMPOW_WALLET -a)
+EMPOW_VALOPER_ADDRESS=$(nibid keys show $EMPOW_WALLET --bech val -a)
+```
+
+```shell
+echo 'export EMPOW_WALLET_ADDRESS='${EMPOW_WALLET_ADDRESS} >> $HOME/.bash_profile
+echo 'export EMPOW_VALOPER_ADDRESS='${EMPOW_VALOPER_ADDRESS} >> $HOME/.bash_profile
+source $HOME/.bash_profile
+```
+
+🔴 **Cüzdanınızın mnemonic kelimelerini kaydetmeyi unutmayınız!**
 
 ## Faucet
 Discord [#faucet](https://discord.gg/BUwMw5JUqS) kanalından `$request CUZDAN-ADRESINIZ altruistic-1
