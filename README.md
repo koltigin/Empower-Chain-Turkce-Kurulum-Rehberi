@@ -385,14 +385,14 @@ empowerd tx slashing unjail \
 
 ### Node'u Tamamen Silme 
 ```shell
-systemctl stop canined && \
-systemctl disable canined && \
-rm /etc/systemd/system/canined.service && \
+systemctl stop empowerd && \
+systemctl disable empowerd && \
+rm /etc/systemd/system/empowerd.service && \
 systemctl daemon-reload && \
 cd $HOME && \
-rm .canine -rf && \
-rm canine-chain -rf && \
-rm $(which canined) -rf 
+rm .empowerchain -rf && \
+rm empowerchain -rf && \
+rm $(which empowerd) -rf 
 sed -i '/EMPOW_/d' ~/.bash_profile
 ```
 
